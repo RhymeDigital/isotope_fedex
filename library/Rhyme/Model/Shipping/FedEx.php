@@ -121,8 +121,6 @@ class FedEx extends Iso_Shipping implements IsotopeShipping
 			}
 			else
 			{
-log_message(strip_tags(static::varDumpToString($arrResponse)), 'debug.log');
-
 				$strLogMessage = sprintf('Error in shipping digest: %s - %s',$arrResponse['RatingServiceSelectionResponse']["Response"]["ResponseStatusDescription"], $arrResponse['RatingServiceSelectionResponse']["Response"]["Error"]["ErrorDescription"]);
 				$strMessage = sprintf('%s - %s',$arrResponse['RatingServiceSelectionResponse']["Response"]["ResponseStatusDescription"], $arrResponse['RatingServiceSelectionResponse']["Response"]["Error"]["ErrorDescription"]);
 				log_message($strLogMessage, 'error.log');
