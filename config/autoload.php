@@ -16,7 +16,7 @@
  * Register PSR-0 namespace
  */
 NamespaceClassLoader::add('Rhyme', 'system/modules/isotope_fedexshipping/library');
-NamespaceClassLoader::add('FedExAPI', 'system/modules/isotope_fedexshipping/vendor');
+NamespaceClassLoader::add('FedExAPI', 'system/modules/isotope_fedexshipping/vendorapi');
 
 
 /**
