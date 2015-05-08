@@ -28,6 +28,9 @@
         "psr-0": {
             "Rhyme\\": [
                 "library/"
+            ],
+            "FedExApi\\": [
+                "library/"
             ]
         }
     },
