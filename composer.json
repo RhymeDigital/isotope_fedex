@@ -30,7 +30,7 @@
                 "library/"
             ],
             "FedExApi\\": [
-                "library/"
+                "vendor/"
             ]
         }
     },
