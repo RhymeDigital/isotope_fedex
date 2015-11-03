@@ -216,11 +216,12 @@ class FedEx extends Iso_Shipping implements IsotopeShipping
 		foreach($objCollection->getItems() as $objItem)
 		{
 			$product = $objItem->getProduct();
-			$arrDimensions = $product->package_dimensions;
+			$arrDimensions = deserialize($product->package_dimensions, true);
 			$fltWeight = $this->getShippingWeight($objItem, 'lb');
 			$fltInsurance = round($this->insuranceIsPercentage() ? ($this->getInsurancePercentage()/100)*$product->getPrice()->getAmount(1) : floatval($this->arrData['fedex_insurance']), 2);
 	
             for ($i = 0; $i < $objItem->quantity; $i++) {
+
 				$arrShipment['packages'][] = array
 				(
 					'packaging'		=> array
@@ -231,7 +232,7 @@ class FedEx extends Iso_Shipping implements IsotopeShipping
 					'insuredValue' => $fltInsurance,
 					'units'		=> 'LBS',
 					'weight'	=> ceil($fltWeight ?: 1),
-					'dimensions'=> array('length'=>round($arrDimensions[0]), 'width'=>round($arrDimensions[1]), 'height'=>round($arrDimensions[2]))
+					'dimensions'=> array('length'=>floatval($arrDimensions[0]) ?: 1, 'width'=>floatval($arrDimensions[1]) ?: 1, 'height'=>floatval($arrDimensions[2]) ?: 1)
 				);
 			}
 		}
