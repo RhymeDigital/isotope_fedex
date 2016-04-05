@@ -15,8 +15,8 @@
 /**
  * Palettes
  */
-$GLOBALS['TL_DCA']['tl_iso_shipping']['palettes']['fedex_single']	= '{title_legend},type,name,label;{note_legend:hide},note;{price_legend},price,tax_class;{fedex_legend},fedex_enabledService,fedex_PackagingService,fedex_insurance;{config_legend},weight_unit,countries,subdivisions,minimum_total,maximum_total,product_types,product_types_condition,config_ids;{expert_legend:hide},guests,protected;{enabled_legend},enabled';
-$GLOBALS['TL_DCA']['tl_iso_shipping']['palettes']['fedex_multiple']	= '{title_legend},type,name,label;{note_legend:hide},note;{price_legend},price,tax_class;{fedex_legend},fedex_enabledService,fedex_PackagingService,fedex_insurance;{config_legend},weight_unit,countries,subdivisions,minimum_total,maximum_total,product_types,product_types_condition,config_ids;{expert_legend:hide},guests,protected;{enabled_legend},enabled';
+$GLOBALS['TL_DCA']['tl_iso_shipping']['palettes']['fedex_single']	= '{title_legend},type,name,label;{note_legend:hide},note;{price_legend},price,tax_class;{fedex_legend},fedex_enabledService,fedex_PackagingService,fedex_insurance;{config_legend},weight_unit,countries,subdivisions,minimum_total,maximum_total,minimum_weight,maximum_weight,product_types,product_types_condition,config_ids;{expert_legend:hide},guests,protected;{enabled_legend},enabled';
+$GLOBALS['TL_DCA']['tl_iso_shipping']['palettes']['fedex_multiple']	= '{title_legend},type,name,label;{note_legend:hide},note;{price_legend},price,tax_class;{fedex_legend},fedex_enabledService,fedex_PackagingService,fedex_insurance;{config_legend},weight_unit,countries,subdivisions,minimum_total,maximum_total,minimum_weight,maximum_weight,product_types,product_types_condition,config_ids;{expert_legend:hide},guests,protected;{enabled_legend},enabled';
 
 
 /**
