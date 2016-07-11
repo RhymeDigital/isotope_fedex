@@ -40,6 +40,24 @@ class FedEx extends Iso_Shipping implements IsotopeShipping
 {
 
     /**
+     * Return true or false depending on if shipping method is available
+     * @return  bool
+     * @todo must check availability for a specific product collection (and not hardcoded to the current cart)
+     */
+    public function isAvailable()
+    {
+    	$blnIsAvailable = parent::isAvailable();
+    	$fltPrice = $this->getPrice();
+    	
+    	if ($blnIsAvailable && floatval($fltPrice) == 0)
+    	{
+	    	return false;
+    	}
+
+        return $blnIsAvailable;
+    }
+
+    /**
      * Return calculated price for this shipping method
      * @param IsotopeProductCollection
      * @return float
